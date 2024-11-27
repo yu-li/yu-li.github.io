@@ -6,6 +6,14 @@ body
 	font-size: 12px;
 	overflow: auto
 }
+
+.video-container {
+	position: relative;
+	padding-top: 56.25%;
+	/* 16:9 Aspect Ratio */
+	margin: 20px 0;
+}
+
 #mainDiv
 {
 	margin-left: auto;
@@ -52,3 +60,27 @@ body
 #errorMsg{width:100%;text-align:center;font-size:24px;position:absolute;top:100px;left:0}
 
 #copyright a{color:#666}
+
+
+iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.button {
+	margin: 10px;
+	padding: 10px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	font-size: 24px;
+	/* Larger arrow size */
+	color: #007BFF;
+}
+
+.button:hover {
+	color: #0056b3;
+}

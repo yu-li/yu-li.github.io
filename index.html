@@ -29,34 +29,37 @@
                     <h4>&nbsp; &nbsp; <i class="fa fa-envelope"></i> &nbsp; liyu[at]idea.edu.cn</h4>
                     <br>
                     <div align="left">
-                        &nbsp;&nbsp;<a href="https://scholar.google.com/citations?user=j9lwU7kAAAAJ&hl=en"><i style="font-size:26px"
+                        <!-- &nbsp;&nbsp;
+                        <a href="https://scholar.google.com/citations?user=j9lwU7kAAAAJ&hl=en"><i style="font-size:26px"
                                 class="ai ai-google-scholar"></i>
                             Google Scholar
                         </a>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://idea-genai.github.io"><i style="font-size:26px"
                                 class="fa fa-github"></i>
                             IDEA-GenAI
-                        </a>
+                        </a>  -->
                         <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/ianlee822"><i style="font-size:26px"
                                 class="fa fa-twitter"></i>
                             Twitter
-                        </a> -->
+                        </a>
                     </div>
                 </div>
+
                 <div id="photo"><img src="img/profile.gif" alt="Yu's Profile Picture" width="224" height="224"></div>
 
             </div>
 
             <div id="container">
                 <div id="aboutlong">
-                    <p>I am a Principal Researcher at International Digital Economy Academy (IDEA),
+                    <p>I am currently a Principal Researcher at International Digital Economy Academy (IDEA),
                         where I lead IDEA's <a href="https://www.idea.edu.cn/research/idea-vistring-lab.html">Vistring Lab</a> and focus on video content generation and editing.
-                        Prior to joining IDEA, I worked at
-                        <a href="https://arc.tencent.com/en/index">Tencent ARC Lab</a>, and
+                        Before joining IDEA, I was part of the founding team at
+                        <a href="https://arc.tencent.com/en/index">Tencent ARC Lab</a>, and worked at
                         <a href="https://www.blackmagicdesign.com/products/davinciresolve/">Blackmagic Design</a>.
-                        I hold a PhD degree from National University of Singapore, advised by Prof.
+                        There I contributed to the AI features behind the Emmy™ award-winning DaVinci Resolve.
+                        I earned my PhD degree from National University of Singapore, advised by Prof.
                         <a href="https://www.eecs.yorku.ca/~mbrown/">Michael S Brown</a>. I was a PostDoc Researcher at
-                        <a href="http://adsc.illinois.edu/">UIUC</a>.
+                        <a href="http://adsc.illinois.edu/">UIUC Advanced Digital Science Center</a>.
                         I am also an adjunct professor at the South China University of Technology.
                     </p>
                     <br>
@@ -77,11 +80,11 @@
                 <h3>Recent Services: </h3>
                 <ul>
                     <li>
-                        Area Chair: CVPR'23, 24, NeurIPS'23, 24, ECCV'24, MM'24, ICLR'25
+                        Area Chair: CVPR'23-24, NeurIPS'23-24, ECCV'24, MM'24, ICLR'25
                     </li>
 
                     <li>
-                        Workshop (Co)organizer: 1-4th PBDL Workshop (in conjunction with ICCV'17,'19,'21, CVPR'24)
+                        Workshop (Co)organizer: 1-4th PBDL Workshop (in conjunction with ICCV'17-21, CVPR'24)
                     </li>
 
                     <li>
@@ -92,28 +95,54 @@
 
                 <h3>News: </h3>
 
-                    <li>
-                        <font color="orange"><b>[Feb. 2024]</b> 📢Call for paper: join us at PBDL@CVPR 2024 <a
-                                href="https://pbdl-ws.github.io/pbdl2024/callforpapers.html"> 🌐[website] </a>. Explore the intersection of
-                            physics-based vision and deep learning.</font>
-                    </li>
+                <!-- <li>
+                                        <font color="orange"><b>[Feb. 2024]</b> 📢Call for paper: join us at PBDL@CVPR 2024 <a
+                                                href="https://pbdl-ws.github.io/pbdl2024/callforpapers.html"> 🌐[website] </a>. Explore the intersection of
+                                            physics-based vision and deep learning.</font>
+                                    </li> -->
 
-                    <li>
-                        <font color="orange"><b>[Jan. 2024]</b> Three papers accepted by ICLR 2024</font>
-                    </li>
+                <li>
+                    <font color="orange"><b>[Jan. 2024]</b> Three papers accepted by ICLR 2024</font>
+                </li>
 
-                    <li>
-                        <font color="orange"><b>[Oct. 2023]</b> 2022 World's Top 2% Scientists by Stanford University </font>
-                    </li>
+                <li>
+                    <font color="orange"><b>[Oct. 2023]</b> 2022 World's Top 2% Scientists by Stanford University </font>
+                </li>
 
-                    <!-- <li>
-                        <font color="orange"><b>[Jul. 2023]</b> Our <a href="https://github.com/IDEA-Research/DWPose"> DWPose </a> is the Top 1 on COCO-WholeBody Benchmark.</font>
-                    </li>
-
-                    <li>
-                        <font color="orange"><b>[Jul. 2023]</b> Five papers accepted by ICCV 2023 </font>
-                    </li> -->
                 <br>
+
+                <h3>Recent Highlight: </h3>
+                <!-- <hr style="margin-top:0px">
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe src="https://www.youtube.com/embed/VO6m49VC3zw" allowfullscreen=""
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div> -->
+
+                <div class="video-container">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe id="videoPlayer" src="https://www.youtube.com/embed/VO6m49VC3zw?enablejsapi=1&mute=1" allowfullscreen=""
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <button class="button" onclick="nextVideo()">&#9654; Next</button>
+                </div>
+
+                <script>
+                    const videos = [
+                        "https://www.youtube.com/embed/VO6m49VC3zw?enablejsapi=1&mute=1",
+                        "https://www.youtube.com/embed/7A3DMaB6Zk0?enablejsapi=1&mute=1",
+                        "https://www.youtube.com/embed/HFaSd5do-zI?enablejsapi=1&mute=1"
+                    ];
+                    let currentVideoIndex = 0;
+
+                    function nextVideo() {
+                        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+                        document.getElementById("videoPlayer").src = videos[currentVideoIndex];
+                    }
+                </script>
 
                 <!-- <h3>Highlights: </h3>
                 <li>
@@ -650,7 +679,7 @@
                 </table>
                 <div id="footer">
                     <p>
-                        <center> <i>Last updated on Oct. 2023</i> </center>
+                        <center> <i>Last updated on Aug. 2024</i> </center>
                     </p>
                 </div>
             </div>
