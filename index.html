@@ -63,7 +63,15 @@
                             class="fas fa-graduation-cap"></i></a>
                     <a href="https://github.com/yu-li" title="GitHub"><i class="fab fa-github"></i></a>
                     <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <!-- <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a> -->
+                    <!-- 小红书按钮 (灰色) -->
+                    <a onclick="showModal('xhs')" title="Xiaohongshu" style="cursor: pointer;">
+                        <i class="fas fa-book"></i>
+                    </a>
+                    <!-- 微信按钮 (灰色) -->
+                    <a onclick="showModal('wechat')" title="WeChat" style="cursor: pointer;">
+                        <i class="fab fa-weixin"></i>
+                    </a>
                 </div>
             </div>
             <div class="profile-image-container">
@@ -617,6 +625,30 @@
         </footer>
     </div>
 
+    <!-- Common Modal Structure -->
+    <div id="socialModal" class="modal" onclick="if(event.target === this) closeModal()">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+
+            <h3 id="modalTitle" style="color: var(--heading-color); margin-bottom: 1rem; font-size: 1.2rem;">
+                <!-- Icon and Title will be injected here -->
+            </h3>
+
+            <!--
+                     请准备两张二维码图片:
+                     1. img/xhs_qr.jpg (小红书)
+                     2. img/wechat_qr.jpg (微信)
+                -->
+            <div id="qrContainer" class="qr-placeholder">
+                <!-- Image or Placeholder will be injected here -->
+            </div>
+
+            <p id="modalDesc" style="margin-top: 1rem; color: var(--text-color); font-size: 0.9rem;">
+                <!-- Description text will be injected here -->
+            </p>
+        </div>
+    </div>
+
     <script>
         // --- 暗色模式切换逻辑 ---
         function toggleTheme() {
@@ -663,6 +695,51 @@
             document.getElementById(groupName).classList.add("active-group");
             evt.currentTarget.classList.add("active");
         }
+
+        // --- Modal (弹窗) 逻辑 [UPDATED] ---
+        function showModal(type) {
+            const modal = document.getElementById('socialModal');
+            const titleEl = document.getElementById('modalTitle');
+            const qrContainer = document.getElementById('qrContainer');
+            const descEl = document.getElementById('modalDesc');
+
+            let iconClass, iconColor, titleText, imgPath, descText;
+
+            if (type === 'xhs') {
+                iconClass = 'fas fa-book';
+                iconColor = '#ff2442';
+                titleText = ' XiaoHongShu';
+                imgPath = 'img/xhs_qr.jpg';
+                descText = 'Scan to follow me on XiaoHongShu.';
+            } else if (type === 'wechat') {
+                iconClass = 'fab fa-weixin';
+                iconColor = '#07c160';
+                titleText = ' WeChat';
+                imgPath = 'img/wechat_qr.jpg';
+                descText = 'Scan to add me on WeChat.';
+            }
+
+            // 设置标题
+            titleEl.innerHTML = `<i class="${iconClass}" style="color: ${iconColor}; margin-right: 8px;"></i>${titleText}`;
+
+            // 设置二维码 (检测图片是否存在较难，这里默认尝试加载图片，失败则显示占位符)
+            // 为了演示，这里使用 innerHTML 插入 img 标签
+            // 请确保你有 img/xhs_qr.jpg 和 img/wechat_qr.jpg
+            qrContainer.innerHTML = `<img src="${imgPath}" alt="${titleText} QR Code" class="qr-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                        <div class="qr-placeholder" style="display:none; width:200px; height:200px; margin:0 auto;">
+                                            [Please upload<br>${imgPath}]
+                                        </div>`;
+
+            // 设置描述
+            descEl.textContent = descText;
+
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('socialModal').style.display = "none";
+        }
+
     </script>
 </body>
 
