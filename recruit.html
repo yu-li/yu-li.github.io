@@ -3,31 +3,125 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
-    <title>Yu Li, PhD</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu Li, PhD - Internship Recruitment</title>
+    <!-- 引入更现代的字体 -->
+    <link href='https://fonts.googleapis.com/css?family=Inter:300,400,600&display=swap' rel='stylesheet'
+        type='text/css'>
+
+    <style>
+        body {
+            font-family: 'Inter', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #cv {
+            max-width: 800px;
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        h2 {
+            color: #0f172a;
+            font-size: 1.8rem;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            letter-spacing: -0.025em;
+        }
+
+        h4 {
+            color: #1e40af;
+            font-size: 1.1rem;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        h4::before {
+            content: "▹";
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        .content-text {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-bottom: 10px;
+        }
+
+        .apply-box {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            border-radius: 4px;
+        }
+
+        .apply-box b {
+            color: #1e40af;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 640px) {
+            #cv {
+                padding: 25px;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
 </head>
 
-<div id="cv">
-    <h4>粤港澳大湾区数字经济研究院IDEA(深圳)计算机视觉算法实习生招聘</h4>
-    <br>
-    <!-- 实验室负责人：<a href="index.html">李昱 博士</a> <br> -->
-    <br>
-    工作职责：<br>
-    1. 负责计算机视觉与计算机图形学相关技术研究，方向包括但不限于人脸人体动态捕捉，3D重建，图像与视频生成，神经渲染，扩散模型，AR/VR相关技术等；<br>
-    2. 负责跟进计算机视觉、深度学习、计算机图形学业界最新进展，负责相关技术的研发与工程实现，并提出和优化最前沿的算法，保持算法在工业界和学术界的领先。<br>
-    3. 辅助完成相关专利的申请及相关论文的撰写；<br>
-    <br>
-    任职要求：<br>
-    1. 有扎实的算法与数理基础以及工程实现能力，至少精通C++或者Python <br>
-    2. 在计算机视觉、深度学习、计算机图形学方面有一定研究基础，熟悉主流模型和算法，关注领域内的最新进展，能够跟进和实现新的算法能力 <br>
-    3. 需有论文发表经验，有顶会论文发表者优先 <br>
-    4. 知名国际人工智能竞赛、计算机视觉竞赛优胜者优先 <br>
-    5. 对科技改变世界有浓厚兴趣，有较强的自主性与实践能力 <br>
-    6. 实习期4-6个月，根据表现可续签，实习地点为深圳。实习待遇优，管三餐，外地来深提供房补 <br>
-    <br>
-    申请途径：<br>
-    邮件主题【XXX-实习申请】，配简短自我介绍+简历至 liyu[at]idea.edu.cn
-</div>
+<body>
+    <div id="cv">
+        <h2>IDEA研究院(深圳)研究实习生招聘 - 2026版</h2>
 
+        <h4>团队介绍</h4>
+        <div class="content-text">
+            这里是IDEA研究院的具身智能实验室和AI4Science实验室，我们的目标是通过技术创新推动具身智能和AI4Science的发展，构建下一代具身智能系统和AI4Science系统，助力数字经济发展。
+        </div>
+        <div class="content-text">
+            我们正在寻找对算法研究充满热情的实习生加入我们的团队，共同探索和实现前沿的技术。
+        </div>
+        <div class="content-text">
+            之前培养的实习生已经在顶会发表了多篇论文，并且在相关领域取得了显著的研究成果，后续加入Google AI, Meta等知名机构，或者UW, NYU等顶级院校深造。
+        </div>
+        <div class="content-text">
+            我们欢迎有志于在算法领域深耕的同学加入我们，一起推动科技创新，改变世界。
+        </div>
+
+        <h4>工作职责</h4>
+        <div class="content-text">1. 负责技术研究，方向包括但不限于以下：以人为主的内容理解生成与具身系统结合；下一代具身数据的构建；AI4Science基模型；AI4Science Agent
+        </div>
+        <div class="content-text">2. 负责跟进最新进展，负责相关技术的研发与工程实现，并提出和优化最前沿的技术，保持技术的先进性。</div>
+        <div class="content-text">3. 辅助完成相关专利的申请及相关论文的撰写。</div>
+
+        <h4>任职要求</h4>
+        <div class="content-text">1. 有扎实的算法与数理基础以及工程实现能力，至少精通Python</div>
+        <div class="content-text">2. 在相关领域有一定研究基础，熟悉主流模型和算法，关注领域内的最新进展，能够跟进和实现新的算法能力</div>
+        <div class="content-text">3. 需有论文发表经验，有顶会论文发表者优先</div>
+        <div class="content-text">4. 对科技改变世界有浓厚兴趣，有较强的自主性与实践能力</div>
+        <div class="content-text">5. 实习期4-6个月，根据表现可续签，实习地点为深圳。实习待遇优，管三餐，外地来深提供房补</div>
+
+        <div class="apply-box">
+            <h4>申请途径</h4>
+            邮件主题 <b>【XXX-实习申请】</b>，配简短自我介绍+简历至：<br>
+            <strong>liyu [at] idea [dot] edu [dot] cn</strong>
+        </div>
+    </div>
+</body>
+
+</html>
