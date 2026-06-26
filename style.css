@@ -139,6 +139,93 @@ nav a.active {
 	margin-top: 1.5rem;
 }
 
+.profile-highlights {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1rem;
+}
+
+.highlight-item {
+	display: grid;
+	grid-template-columns: 28px 1fr;
+	align-items: start;
+	gap: 0.75rem;
+	padding: 1rem 1.1rem;
+	background: var(--secondary-bg);
+	border: 1px solid var(--border-color);
+	border-radius: 10px;
+	color: var(--text-color);
+	font-size: 0.95rem;
+	line-height: 1.45;
+}
+
+.highlight-item i {
+	color: var(--accent-color);
+	font-size: 1rem;
+	line-height: 1.45;
+	text-align: center;
+}
+
+.group-links {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem;
+	margin-top: 1.2rem;
+}
+
+.group-links-label {
+	font-size: 0.82rem;
+	font-weight: 700;
+	color: var(--date-color);
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.group-link {
+	display: inline-grid;
+	grid-template-columns: auto auto;
+	grid-template-areas:
+		"icon name"
+		"icon detail";
+	column-gap: 0.55rem;
+	align-items: center;
+	padding: 0.55rem 0.75rem;
+	border: 1px solid var(--border-color);
+	border-radius: 999px;
+	background: var(--bg-color);
+	color: var(--text-color);
+	box-shadow: var(--card-shadow);
+	text-decoration: none;
+}
+
+.group-link i {
+	grid-area: icon;
+	font-size: 1.1rem;
+	color: var(--accent-color);
+}
+
+.group-link span {
+	grid-area: name;
+	font-size: 0.95rem;
+	font-weight: 700;
+	line-height: 1.1;
+}
+
+.group-link small {
+	grid-area: detail;
+	color: var(--date-color);
+	font-size: 0.72rem;
+	line-height: 1.1;
+}
+
+.group-link:hover {
+	border-color: var(--accent-color);
+	color: var(--accent-color);
+	text-decoration: none;
+	transform: translateY(-2px);
+}
+
 .social-links a {
 	font-size: 1.25rem;
 	color: var(--text-color);
@@ -428,6 +515,21 @@ section {
 	object-fit: cover;
 }
 
+.pub-placeholder {
+	width: 100%;
+	min-height: 130px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 6px;
+	border: 1px solid var(--border-color);
+	background:
+		radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.18), transparent 28%),
+		linear-gradient(135deg, var(--bg-color), var(--secondary-bg));
+	color: var(--accent-color);
+	font-size: 2rem;
+}
+
 .pub-content {
 	display: flex;
 	flex-direction: column;
@@ -536,6 +638,19 @@ footer {
 		justify-content: center;
 	}
 
+	.profile-highlights {
+		text-align: left;
+	}
+
+	.group-links {
+		justify-content: center;
+	}
+
+	.group-links-label {
+		flex-basis: 100%;
+		text-align: center;
+	}
+
 	.publication-item {
 		grid-template-columns: 1fr;
 		/* 论文缩略图占满 */
@@ -550,6 +665,10 @@ footer {
 		/* 保持图片比例 */
 		background-color: #000;
 		/* 深色背景看gif更清楚 */
+	}
+
+	.pub-placeholder {
+		min-height: 160px;
 	}
 }
 
